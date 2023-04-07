@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="nick_bot">
+  
+  <link name="world"/>
+  
+  <joint name="base_joint" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+  </joint>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.032405 -0.00051995 0.03193"
+        rpy="0 0 0" />
+      <mass
+        value="1.1011" />
+      <inertia
+        ixx="0.001263"
+        ixy="2.5167E-06"
+        ixz="-4.9074E-05"
+        iyy="0.0029432"
+        iyz="1.9688E-06"
+        izz="0.0039215" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.00014233 0.11339 0.028392"
+        rpy="0 0 0" />
+      <mass
+        value="0.6335" />
+      <inertia
+        ixx="0.00068202"
+        ixy="-8.016E-07"
+        ixz="4.9488E-07"
+        iyy="0.00030667"
+        iyz="-4.7343E-05"
+        izz="0.00081798" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0305"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.5"
+      upper="3.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.00022044 0.091028 0.053199"
+        rpy="0 0 0" />
+      <mass
+        value="0.52734" />
+      <inertia
+        ixx="0.0016362"
+        ixy="-1.1139E-06"
+        ixz="5.8726E-07"
+        iyy="0.00020546"
+        iyz="3.2563E-05"
+        izz="0.0017886" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0 0.20125 0.0011675"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="-0.0042062 0 0.99999" />
+    <limit
+      lower="-1.6"
+      upper="1.6"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="5.0355E-05 -0.010892 0.010933"
+        rpy="0 0 0" />
+      <mass
+        value="0.11306" />
+      <inertia
+        ixx="4.9032E-05"
+        ixy="-6.8837E-09"
+        ixz="3.2674E-08"
+        iyy="3.6024E-05"
+        iyz="-7.0703E-07"
+        izz="5.732E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0.2 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0.0042062 0 0.99999" />
+    <limit
+      lower="-2"
+      upper="2"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="-3.1646E-05 0.081245 -0.0074944"
+        rpy="0 0 0" />
+      <mass
+        value="0.21005" />
+      <inertia
+        ixx="0.00036978"
+        ixy="9.3158E-09"
+        ixz="-5.2964E-08"
+        iyy="7.2293E-05"
+        iyz="2.4139E-06"
+        izz="0.00035723" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0011675"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-4"
+      upper="4"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.0027735 -0.011173 -1.3036E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.049088" />
+      <inertia
+        ixx="1.7829E-05"
+        ixy="-1.0477E-06"
+        ixz="-3.0628E-08"
+        iyy="1.3411E-05"
+        iyz="2.9316E-09"
+        izz="1.0527E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="revolute">
+    <origin
+      xyz="0 0.18825 0"
+      rpy="-7.0292E-05 0 -0.016712" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="-0.0042056 0 -0.99999" />
+    <limit
+      lower="-3.50"
+      upper="0.36"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="0.00056302 -0.0002805 0.029374"
+        rpy="0 0 0" />
+      <mass
+        value="0.055212" />
+      <inertia
+        ixx="7.7928E-06"
+        ixy="-1.6204E-07"
+        ixz="-2.5483E-07"
+        iyy="2.5129E-05"
+        iyz="-4.2094E-07"
+        izz="2.9561E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="revolute">
+    <origin
+      xyz="0.0099995 0.00016713 -4.2055E-05"
+      rpy="3.1249 1.5666 3.1416" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14159"
+      upper="3.14159"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="EndEffector1">
+    <inertial>
+      <origin
+        xyz="-0.020182 0.010425 0.010888"
+        rpy="0 0 0" />
+      <mass
+        value="0.0066653" />
+        <inertia ixx="0.0001" ixy="0.000"  ixz="0.000"  
+         iyy="0.0001" iyz="0.000"
+         izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/EndEffector1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/EndEffector1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_7"
+    type="prismatic">
+    <origin
+      xyz="0 -0.015375 0.044556"
+      rpy="0 0 0" />
+    <parent
+      link="link_6" />
+    <child
+      link="EndEffector1" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.02"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="EndEffector2">
+    <inertial>
+      <origin
+        xyz="-0.02017 0.010554 0.010975"
+        rpy="0 0 0" />
+      <mass
+        value="0.0066318" />
+      <inertia ixx="0.0001" ixy="0.000"  ixz="0.000"  
+         iyy="0.0001" iyz="0.000"
+         izz="0.0001"/>
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/EndEffector2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://nick_bot/meshes/EndEffector2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_8"
+    type="prismatic">
+    <origin
+      xyz="0 0.009575 0.044556"
+      rpy="0 0 3.1416" />
+    <parent
+      link="link_6" />
+    <child
+      link="EndEffector2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.02"
+      effort="0"
+      velocity="0" />
+    <mimic joint="joint_7"/>  
+  </joint>
+
+  
+    <transmission name="link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_1">
+     <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_1_motor">
+   
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+       <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+   	</transmission>
+   
+     <transmission name="link_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_2">
+     <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_2_motor">
+   
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+       <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+   	</transmission>
+   
+     <transmission name="link_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_3">
+     <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_3_motor">
+   
+   <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+       <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+	</transmission>
+	
+	<transmission name="link_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_4">
+     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_4_motor">
+   
+   <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+       <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+	</transmission>
+	
+	<transmission name="link_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_5">
+     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_5_motor">
+   
+   <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+       <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+	</transmission>
+	
+	<transmission name="link_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_6">
+     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_6_motor">
+   
+   <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+       <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+	</transmission>
+	
+	<transmission name="link_7_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_7">
+     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_7_motor">
+   
+   <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+       <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+	</transmission>
+	
+	<transmission name="link_8_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+   <joint name="joint_8">
+     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+   </joint>
+   <actuator name="link_8_motor">
+   
+   <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+       <mechanicalReduction>1</mechanicalReduction>
+   </actuator>
+	</transmission>
+</robot>

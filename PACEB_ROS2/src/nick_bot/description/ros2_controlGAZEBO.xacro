@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">  
+  
+    <gazebo>
+        <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+            <parameters> $(find nick_bot)/config/nickbot_controllers.yaml</parameters>
+        </plugin>
+    </gazebo>
+
+
+  <ros2_control name="GazeboSystem" type="system">
+  	<hardware>
+  	  <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+  	</hardware>
+  	<joint name="joint_1">
+  	  <command_interface name="position"/>
+  	  <state_interface name="position">
+  	    <param name="initial_value">0.0</param>
+  	   </state_interface>
+  	   <state_interface name="velocity"/>
+  	</joint>   
+  	<joint name="joint_2">
+  	  <command_interface name="position"/>
+  	  <state_interface name="position">
+  	    <param name="initial_value">0.0</param>
+  	   </state_interface>
+  	   <state_interface name="velocity"/>
+  	</joint>   
+  	<joint name="joint_3">
+  	  <command_interface name="position"/>
+  	  <state_interface name="position">
+  	    <param name="initial_value">0.0</param>
+  	   </state_interface>
+  	   <state_interface name="velocity"/>
+  	</joint>   
+  	<joint name="joint_4">
+  	  <command_interface name="position"/>
+  	  <state_interface name="position">
+  	    <param name="initial_value">0.0</param>
+  	   </state_interface>
+  	   <state_interface name="velocity"/>
+  	</joint>   
+  	<joint name="joint_5">
+  	  <command_interface name="position"/>
+  	  <state_interface name="position">
+  	    <param name="initial_value">0.0</param>
+  	   </state_interface>
+  	   <state_interface name="velocity"/>
+  	</joint>   
+  	<joint name="joint_6">
+  	  <command_interface name="position"/>
+  	  <state_interface name="position">
+  	    <param name="initial_value">0.0</param>
+  	   </state_interface>
+  	   <state_interface name="velocity"/>
+  	</joint>  
+  	<joint name="joint_7">
+  	  <command_interface name="position"/>
+  	  <state_interface name="position">
+  	    <param name="initial_value">0.0</param>
+  	   </state_interface>
+  	   <state_interface name="velocity"/>
+  	</joint>   
+  	<joint name="joint_8">
+  	  <command_interface name="position"/>
+  	  <state_interface name="position">
+  	    <param name="initial_value">0.0</param>
+  	   </state_interface>
+  	   <state_interface name="velocity"/>
+  	</joint>    
+  </ros2_control>
+
+  
+  <transmission name="link_1_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_1_motor">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+   
+  <transmission name="link_2_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_2">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_2_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+   
+   
+  <transmission name="link_3_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_3">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_3_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+      
+  <transmission name="link_4_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_4">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_4_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+      
+  <transmission name="link_5_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_5">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_5_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+   
+      
+  <transmission name="link_6_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_6">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_6_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+  <transmission name="link_7_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_7">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_7_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+    <transmission name="link_8_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_8">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="link_8_motor">
+        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  
+
+</robot>	

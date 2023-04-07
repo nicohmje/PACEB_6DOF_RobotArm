@@ -1,0 +1,9 @@
+<library path="nick_bot_hw_interface">
+  <class name="nick_bot_hw_interface/NickBotHwInterface"
+         type="nick_bot_hw_interface::NickBotHwInterface"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+        Hardware Interface to control nick_bot. 
+    </description>
+  </class>
+</library>
